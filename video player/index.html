@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./001.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>video player</title>
+  </head>
+
+  <body class="w-screen h-screen flex items-center justify-center bg-blue-200">
+    <div class="player group flex flex-col relative h-auto w-2/3">
+      <!-- video -->
+      <video src="./02.mp4"></video>
+
+      <div
+        class="controls flex flex-col absolute bottom-0 insetx-0 h-auto w-full bg-white"
+      >
+        <!-- bar -->
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="0"
+          step="1"
+          class="bar w-full h-2 rounded-sm bg-transparent range-sm cursor-pointer focus:border-0 appearance-none [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:bg-transparent [&::-webkit-slider-thumb]:h-2 [&::-webkit-slider-thumb]:w-2"
+        />
+        <!-- controls -->
+        <div
+          class="more h-10 w-full bg-gray-600 hidden justify-between px-10 items-center group-hover:flex group-hover:duration-1000 group-hover:transition-all"
+        >
+          <div class="text-white flex">
+            <span
+              class="material-symbols-outlined cursor-pointer"
+              id="fast_rewind"
+            >
+              fast_rewind
+            </span>
+
+            <span class="material-symbols-outlined cursor-pointer" id="play">
+              play_arrow
+            </span>
+
+            <span
+              class="material-symbols-outlined cursor-pointer"
+              id="fast_forward"
+            >
+              fast_forward
+            </span>
+
+            <div class="current-time ms-5 me-1">00:00</div>
+            <span>/</span>
+            <div class="all-time ms-1">00:00</div>
+          </div>
+          <div class="text-white flex">
+            <div class="relative">
+              <span
+                class="material-symbols-outlined pe-2 cursor-pointer"
+                id="volume_up"
+              >
+                volume_up
+              </span>
+              <input
+                class="hidden absolute -top-12 -right-2 -rotate-90 bg-gradient-to-r from-orange-500 from-50% via-gray-600 via-50% h-2 w-14 vol rounded-lg bg-gray-600 range-sm cursor-pointer focus:border-0 appearance-none [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:bg-orange-500 [&::-webkit-slider-thumb]:rounded-lg [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:w-3"
+                type="range"
+                min="1"
+                max="100"
+                step="1"
+                value="50"
+              />
+            </div>
+            <span class="material-symbols-outlined cursor-pointer" id="fullscreen">
+              fullscreen
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
