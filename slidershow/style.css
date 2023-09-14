@@ -1,0 +1,13 @@
+*{
+    user-select: none;
+}
+.active{
+    background-color: white;
+    border-top: 2px solid red;
+    color: black;
+    /* border-top-right-radius: 0.375rem; */
+}
+li{
+    user-select: none;
+    cursor: pointer;
+}
